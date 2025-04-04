@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Розширювана кнопка</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+        .button-container {
+            position: relative;
+            display: inline-block;
+            border: 2px solid black;
+            padding: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+        .button-container:hover {
+            transform: scale(1.1);
+        }
+        .btn {
+            background-color: yellow;
+            color: red;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: 2px solid black;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            width: 200px;
+            text-align: center;
+        }
+        .btn:hover {
+            width: 250px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            border: 2px solid black;
+            padding: 5px;
+        }
+        .button-container:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            border: 1px solid black;
+            margin: 2px;
+            transition: all 0.3s ease-in-out;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <div class="btn">Я люблю Україну</div>
+        <div class="dropdown-content">
+            <a href="https://example.com">Натисни мене</a>
+            <a href="https://example.org">Ще одна кнопка</a>
+        </div>
+    </div>
+</body>
+</html>
